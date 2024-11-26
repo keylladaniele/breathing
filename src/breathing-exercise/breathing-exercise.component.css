@@ -1,0 +1,63 @@
+.container {
+  text-align: center;
+  margin-top: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.respiration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.breathing-ball {
+  width: 120px;
+  height: 120px;
+  background-color: #3498db; /* Cor inicial azul */
+  border-radius: 50%;
+  animation: breathingAnimation 5s ease-in-out infinite;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para um efeito mais suave */
+}
+
+@keyframes breathingAnimation {
+  0% {
+    transform: scale(1);
+    background-color: #3498db; /* Azul no início */
+  }
+  50% {
+    transform: scale(1.5);
+    background-color: #17c9ba; /* Cor vermelha suave no máximo da expansão */
+  }
+  100% {
+    transform: scale(1);
+    background-color: #3498db; /* Volta ao azul enquanto retorna ao tamanho original */
+  }
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}

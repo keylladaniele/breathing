@@ -1,0 +1,95 @@
+
+.container {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.message {
+  margin-top: 20px;
+}
+
+.sea-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../assets/waves.svg') repeat-x bottom;
+  animation: wave 10s infinite linear;
+  background-size: 130% auto;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0; /* Inicia no ponto inicial */
+  }
+  25% {
+    background-position-x: 1440px; /* Vai para a esquerda */
+  }
+  50% {
+    background-position-x: 2880px; /* Vai para a esquerda (passa para um ciclo maior) */
+  }
+  75% {
+    background-position-x: 1440px; /* Começa a voltar para a direita */
+  }
+  100% {
+    background-position-x: 0; /* Volta para o início, e repete o ciclo */
+  }
+}
+
+
+
+.luffy {
+  max-width: 200px;
+  display: block;
+  margin: 20px auto;
+  animation: fadeInSlide 1.5s ease-out;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.one-piece-quote {
+  font-style: italic;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.luffy-image {
+  margin-top: 20px;
+  width: 200px;
+  max-width: 80%;
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -1600px;
+  }
+}
