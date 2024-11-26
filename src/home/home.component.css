@@ -2,7 +2,7 @@
 .container {
   text-align: center;
   margin-top: 20px;
-  padding: 20px;
+  padding: 30px;
   position: relative;
   overflow: hidden;
 }
@@ -20,7 +20,8 @@ button {
 }
 
 .message {
-  margin-top: 20px;
+  padding: 20px;
+  margin-top: 30px;
 }
 
 .sea-background {

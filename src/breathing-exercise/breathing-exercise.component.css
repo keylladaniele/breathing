@@ -24,7 +24,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 300px;
   flex-direction: column;
   background-color: #f0f0f0;
   text-align: center;

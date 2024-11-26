@@ -1,5 +1,5 @@
 <div [ngClass]="{ 'sea-background': isNicollas }" class="container">
-  <div *ngIf="!showBreathingExercise">
+  <div *ngIf="!showBreathingExercise && !message">
     <h1>Bem-vindo(a)!</h1>
     <p>Digite seu nome:</p>
     <input type="text" [(ngModel)]="name" placeholder="Seu nome" />
@@ -9,24 +9,22 @@
     >
       Enviar
     </button>
-
-    <div *ngIf="message" class="message">
-      <p>{{ message }}</p>
-      <div *ngIf="isNicollas">
-        <p class="one-piece-quote">
-          "One Piece existe, e ele é o tesouro das suas memórias felizes!" 🌊⚓
-        </p>
-        <img
-          src="https://img.assinaja.com/upl/lojas/mundosinfinitos/imagens/foto-one-piece.png"
-          alt="Luffy de One Piece"
-          class="luffy"
-        />
-      </div>
-
-      <button (click)="showBreathingExercise = true">Exercício de Respiração</button>
-    </div>
   </div>
 
+  <div *ngIf="message && !showBreathingExercise" class="message">
+    <p>{{ message }}</p>
+    <div *ngIf="isNicollas">
+      <p class="one-piece-quote">
+        "One Piece existe, e ele é o tesouro das suas memórias felizes!" 🌊⚓
+      </p>
+      <img
+        src="https://img.assinaja.com/upl/lojas/mundosinfinitos/imagens/foto-one-piece.png"
+        alt="Luffy de One Piece"
+        class="luffy"
+      />
+    </div>
+    <button (click)="showBreathingExercise = true">Exercício de Respiração</button>
+  </div>
 
   <app-breathing-exercise *ngIf="showBreathingExercise" (onGoBack)="showBreathingExercise = false"></app-breathing-exercise>
 
